@@ -1,0 +1,16 @@
+# configmaps/pod-envfrom.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cm-envfrom-pod
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: ["sh", "-c", "env && sleep 3600"]
+    envFrom:
+    - configMapRef:
+        name: app-config-literal   # loads ALL keys
+    - configMapRef:
+        name: app-config-env        # loads ALL keys
+  restartPolicy: Never

@@ -1,0 +1,6 @@
+*.secret.yaml
+*-secret.yaml
+.env
+kubeconfig
+secrets/*.key
+secrets/*.crt

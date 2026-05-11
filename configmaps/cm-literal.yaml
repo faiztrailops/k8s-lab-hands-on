@@ -1,0 +1,9 @@
+# configmaps/cm-literal.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config-literal
+data:
+  APP_ENV: "production"
+  LOG_LEVEL: "info"
+  MAX_RETRIES: "3"

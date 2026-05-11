@@ -1,0 +1,11 @@
+# rbac/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev-team
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dev-user
+  namespace: dev-team
